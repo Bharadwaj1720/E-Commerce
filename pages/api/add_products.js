@@ -21,7 +21,7 @@ async function addCart(req, res) {
         const description = data.des;
         const id = Date.now().toString();
         console.log(name, slug, category, image, price, brand, rating, numReviews, countInStock, description, isFeatured, email, id)
-        await connection.query('INSERT INTO products VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?);', [name, slug, category, image, price, brand, rating, numReviews, countInStock, description, isFeatured, email, id]);
+        await connection.query('INSERT INTO products VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);', [name, slug, category, image, price, brand, rating, numReviews, countInStock, description, isFeatured, email, id, '1234', 0.2, 0]);
 
         connection.release();
         res.send('success');

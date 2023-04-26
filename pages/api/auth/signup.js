@@ -36,6 +36,8 @@ async function handler(req, res) {
         password: bcryptjs.hashSync(password),
         isAdmin: false,
         isSeller: false,
+        account_number: " "
+
     });
 
     if (option === '2') {
